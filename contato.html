@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <meta charset="UFT-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contato - Maria Luise Britto</title>
+        <link rel="stylesheet" href="css/style.css">
+    </header>
+    <body>
+        <main>
+            <h1>Contato</h1>
+            <form action="/enviarForm" method="POST">
+                <label for="nome">Nome: </label>
+                <input type="text" name="nome" value="Digite seu nome aqui">
+                <br>
+
+                <label for="Email">Email: </label>
+                <input type="email" name="email" value="Digite seu email aqui">
+                <br>
+
+                <label for="assunto">Assunto: </label>
+                <input type="text" name="assunto" value="Digite seu email aqui">
+                <br>
+
+                <label for="mensagem">Mensagem: </label>
+                <textarea name="mensagem"></textarea>
+                <br>
+
+                <label for="newsletter">Desejo receber a newsletter</label>
+                <input type="checkbox" name="newsletter">
+
+                <button type="submit">Enviar</button>
+            </form>
+        </main>
+    </body>
+</html>
