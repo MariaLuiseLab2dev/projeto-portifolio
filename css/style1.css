@@ -1,0 +1,8 @@
+
+div { color: blue; }
+p { color: red; }
+.intro { color: green; }
+#container { color: purple; }
+#container .intro { color: orange; }
+
+/*p vai ser roxo */
