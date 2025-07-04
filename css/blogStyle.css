@@ -67,7 +67,7 @@ article h2::before {
 p {
   text-align: justify;
   font-size: 20px;
-  margin-bottom: 1vw;
+  margin-bottom: 1.5vw;
 }
 
 /* Imagens */
@@ -114,7 +114,6 @@ aside {
 
 aside ul li {
   list-style: none;
-  text-decoration: none;
   color:var(--cor-preta);
 }
 
@@ -139,6 +138,7 @@ form textarea {
   font-size: 18px;
   margin-bottom: 10px;
   width: 100%;
+  resize: none;
 }
 
 form input:focus,
@@ -170,3 +170,11 @@ footer {
   padding: 5vw;
   color: var(--cor-fundo);
 }
+
+/* modificar os nomes do style.css */
+/* Achar o filho body > main > article.container > h2 
+   clica com o lado direito no devtools(inspecionar)
+   para vê o filho
+
+   BAS -> VSCode ou local (come + ram)
+*/ 
