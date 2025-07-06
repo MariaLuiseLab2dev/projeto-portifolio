@@ -26,31 +26,55 @@ main {
   padding: 2vw 5vw;
 }
 
-/* Cabeçalho e navegação */
 nav {
   background-color: white;
   display: flex;
-  justify-content: center;
-  color: var(--cor-preta)
+  justify-content: space-between; /* distribui horizontalmente ao longo de x*/
+  align-items: center;
+  padding: 1.5vw 2vw;
+  box-shadow: 2px 2px 6px #000000;
 }
 
-nav ul {
-  list-style: none; /* tira o pontinho preto */
-  display: flex; 
+/* Logo */
+nav div img {
+  height: 40px;
+  width: auto;
+}
+
+/* Menu central */
+.menu {
+  list-style: none;
+  font-size: 18px;
+  display: flex;
   gap: 2rem;
-  font-size: 20px;
-  margin: 1.5vw 0;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li a {
-  text-decoration: none; /* tira o sublinhado*/
+.menu li a {
+  text-decoration: none;
   font-weight: bold;
-  color: var(--cor-preta)
+  color: var(--cor-preta);
 }
 
-nav ul li a:hover {
+.menu li a:hover {
   color: var(--cor-hover);
 }
+
+/* Botão */
+.button {
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 18px;
+  border: none;
+  background-color: var(--cor-fundo);
+  color: white;
+}
+
+.button:hover {
+  background-color: #00777b;
+}
+
 
 /* Tipografia */
 h1, h2 {
@@ -66,7 +90,7 @@ article h2::before {
 
 p {
   text-align: justify;
-  font-size: 20px;
+  font-size: 16px;
   margin-bottom: 1.5vw;
 }
 
@@ -149,16 +173,16 @@ form textarea:focus {
 }
 
 /* Botão */
-form button {
+button {
   padding: 12px 24px;
   border-radius: 25px;
   font-size: 18px;
   border: none;
-  background-color: var(--cor-primaria);
+  background-color: var(--cor-fundo);
   color: white;
 }
 
-form button:hover {
+button:hover {
   background-color: #00777b;
 }
 
@@ -170,11 +194,3 @@ footer {
   padding: 5vw;
   color: var(--cor-fundo);
 }
-
-/* modificar os nomes do style.css */
-/* Achar o filho body > main > article.container > h2 
-   clica com o lado direito no devtools(inspecionar)
-   para vê o filho
-
-   BAS -> VSCode ou local (come + ram)
-*/ 
