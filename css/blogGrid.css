@@ -5,6 +5,10 @@
   font-family: "Lucida Sans", Verdana, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --cor-fundo: #2a2a2a;
   --cor-texto: #ffffff;
@@ -40,7 +44,7 @@ nav {
 }
 
 nav div img {
-  height: 40px;
+  height: 50px;
   width: auto;
 }
 
@@ -68,7 +72,6 @@ button {
   padding: 12px 24px;
   border-radius: 25px;
   font-size: 18px;
-  border: none;
   background-color: var(--cor-fundo);
   color: white;
 }
@@ -97,7 +100,7 @@ article h2::before {
 
 p {
   text-align: justify;
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 1.5vw;
 }
 
@@ -134,11 +137,11 @@ table tr:nth-child(even) {
   background-color: var(--cor-secundaria);
 }
 
+/* aside */
 .sidebar {
   grid-area: sidebar;
-  background-color: var(--cor-secundaria);
-  padding: 0.5rem;
-  border-radius: 5px;
+  background-color: var(--cor-fundo);
+  padding: 0.5vw;
   margin: 5vw 2vw;
 }
 
@@ -150,6 +153,51 @@ aside ul li {
 aside ul li a {
   text-decoration: none;
   color: inherit;
+}
+
+aside ul li a img {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Formulários */
+form label {
+  display: inline-block;
+  width: 250px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border: 2px solid #fbfbfb;
+  border-radius: 8px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  width: 100%;
+  resize: none;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: var(--cor-primaria);
+  box-shadow: 0 0 5px var(--cor-primaria);
+  outline: none;
+}
+
+/* Botão */
+button {
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 18px;
+  background-color: var(--cor-fundo);
+  color: white;
+}
+
+button:hover {
+  background-color: #00777b;
 }
 
 footer {
