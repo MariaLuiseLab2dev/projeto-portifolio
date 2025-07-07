@@ -1,0 +1,26 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 80px;
+    background-color: rgb(213, 215, 215);
+    box-shadow: 1px 2px 10px #000;
+    border-radius: 20px;
+}
+
+.cardp {
+    flex-grow: 1;
+    text-align: justify;
+    padding: 25px;
+}
+
+.cardt {
+    flex:display;
+    text-align: center;
+}
+
+.cardb {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}

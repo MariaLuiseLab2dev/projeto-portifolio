@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", Verdana, sans-serif;
+}
+
+:root {
+  --cor-fundo: #2a2a2a;
+  --cor-texto: #ffffff;
+  --cor-preta: #000000;
+  --cor-hover: #656565;
+  --cor-primaria: #00585b;
+  --cor-secundaria: #868989;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "header header"
+    "main sidebar"
+    "footer footer";
+  gap: 20px;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5vw 2vw;
+  box-shadow: 2px 2px 6px #000000;
+}
+
+nav div img {
+  height: 40px;
+  width: auto;
+}
+
+.menu {
+  list-style: none;
+  font-size: 18px;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--cor-preta);
+}
+
+.menu li a:hover {
+  color: var(--cor-hover);
+}
+
+.button,
+button {
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 18px;
+  border: none;
+  background-color: var(--cor-fundo);
+  color: white;
+}
+
+.button:hover,
+button:hover {
+  background-color: #00777b;
+}
+
+.main {
+  grid-area: main;
+  padding: 2vw 5vw;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin-bottom: 2vw;
+}
+
+article h2::before {
+  content: "✨";
+  color: var(--cor-primaria);
+  margin-right: 0.5vw;
+}
+
+p {
+  text-align: justify;
+  font-size: 16px;
+  margin-bottom: 1.5vw;
+}
+
+article img {
+  display: block;
+  margin: 3vw auto;
+  box-shadow: 2px 5px 5px #8c8c8c;
+  padding: 1vw;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+table th {
+  background-color: var(--cor-primaria);
+  color: white;
+  padding: 10px;
+}
+
+table td {
+  padding: 10px;
+}
+
+table tr:nth-child(odd) {
+  background-color: var(--cor-preta);
+}
+
+table tr:nth-child(even) {
+  background-color: var(--cor-secundaria);
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: var(--cor-secundaria);
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin: 5vw 2vw;
+}
+
+aside ul li {
+  list-style: none;
+  color: var(--cor-preta);
+}
+
+aside ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer {
+  grid-area: footer;
+  justify-content: center;
+  display: flex;
+  padding: 5vw;
+  color: var(--cor-fundo);
+  background-color: var(--cor-texto);
+}
