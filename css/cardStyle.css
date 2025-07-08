@@ -30,6 +30,7 @@
     border-radius: 20px;
     border: none;
     background-color: rgb(139, 0, 0);
+    cursor: pointer;
 }
 
 .card img {

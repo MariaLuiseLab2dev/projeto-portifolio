@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/blogGrid.css" />
   </head>
 
-  <body>
+  <body class="contato-page">
     <header class="header">
       <nav>
         <div>
@@ -24,8 +24,8 @@
     </header>
 
     <main>
-      <article class="contato">
-        <h2>Contato</h2>
+      <section>
+        <h2>Fale Comigo</h2>
         <form action="/assuntos.txt" method="get">
           <label for="nome">Nome </label>
           <input type="text" name="nome" placeholder="Digite seu nome aqui" />
@@ -47,13 +47,14 @@
           ></textarea>
           <br />
 
+          <div class="form-checkbox-row">
           <label for="newsletter">Desejo receber a newsletter</label>
           <input type="checkbox" name="newsletter" />
-          <br />
+          </div>
 
           <button type="submit" class="button">Enviar</button>
         </form>
-      </article>
+      </section>
     </main>
   </body>
 </html>
