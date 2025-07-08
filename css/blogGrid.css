@@ -5,6 +5,10 @@
     font-family: "Lucida Sans", Verdana, sans-serif;
 }
 
+@media (min-width:768px) {
+   
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -262,7 +266,6 @@ button:hover {
 form button:hover {
     background-color: #00777b;
 }
-
 
 footer {
     grid-area: footer;
