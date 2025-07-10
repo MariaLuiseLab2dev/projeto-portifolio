@@ -175,6 +175,11 @@ form textarea:focus {
     outline: none;
 }
 
+form  {
+    background-color: var(--cor-fundo);
+    padding: 10px 15px;
+}
+
 /* Botão */
 button {
     padding: 12px 24px;
