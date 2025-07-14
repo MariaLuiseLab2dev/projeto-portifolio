@@ -12,83 +12,101 @@
     <div class="home-container">
         <header class="navbar">
             <nav>
-                <a href="#main"><img src="/images/brand.png" alt="logo" /></a>
+                <a href="indexGrid.html"><img src="/images/brand.png" alt="logo" /></a>
                 <ul>
-                    <li><a href="indexGrid.html">Home</a></li>
-                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="#main">Início</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
                 <button class="button">Login</button>
             </nav>
         </header>
 
-        <main class="main">
-            <section id="main">
-                <article>
-                    <h3 class="digitando">Olá, eu sou a Maria Luise.</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, velit dolorum
-                        accusamus vel
-                        enim cupiditate sequi quidem minima error, sit reprehenderit iure optio pariatur?
-                        Mollitia odio
-                        molestias rerum voluptas? In.
-                    </p>
-
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, velit dolorum
-                        accusamus vel
-                        enim cupiditate sequi quidem minima error, sit reprehenderit iure optio pariatur?
-                        Mollitia odio
-                        molestias rerum voluptas? In.
-                    </p>
-                </article>
-            </section>
+        <main class="main" id="main">
+            <article>
+                <h3 class="digitando">Olá, eu sou a Maria Luise.</h3>
+                <p>
+                    Sou desenvolvedora web fullstack e uma pessoa empenhada, comunicativa e com forte foco no cliente.
+                    Tenho interesse por desenvolvimento web, tanto no front-end quanto no back-end, buscando sempre
+                    soluções completas.
+                    Acredito que a tecnologia deve ser, acima de tudo, funcional e útil. Valorizo o aprendizado
+                    contínuo, a clareza nas entregas e a colaboração em equipe.
+                    Estou sempre disposta a evoluir e encarar novos desafios.
+                </p>
+            </article>
         </main>
 
         <aside class="aside">
             <img src="/images/perfil-informal.jpg" alt="Perfil" />
         </aside>
 
-        <section class="main2">
-            <article>
-                <h2>Meus projetos</h2>
-                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed praesentium dolores id nemo tempore quisquam ut culpa dolorum magnam voluptates quos laudantium reiciendis, necessitatibus error quod dolor eius exercitationem ipsum?</p>
-                <div class="cards-container">
-                    <div class="card">
-                       <a href="https://github.com/MariaLuiseB"><img src="/images/delivery.jpg" alt="Delivery Fominha"></a>
-                       <p>Delivery Fominha</p>
-                    </div>
-                    <div class="card">
-                        <a href="https://github.com/MariaLuiseB"><img src="/images/anime.webp" alt="Animendly"></a>
-                        <p>Chat Animendly</p>
-                    </div>
-                    <div class="card">
-                        <a href="https://github.com/MariaLuiseB"><img src="/images/filmes.webp" alt="Screen Match"></a>
-                        <p>Screen Match</p>
-                    </div>
+        <section class="main-projetos" id="projetos">
+            <h2>Meus projetos</h2>
+            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed praesentium dolores id nemo tempore
+                quisquam ut culpa dolorum magnam voluptates quos laudantium reiciendis, necessitatibus error quod dolor
+                eius exercitationem ipsum?</p>
+            <div class="cards-container">
+                <div class="card">
+                    <a href="https://github.com/MariaLuiseB"><img src="/images/delivery.jpg" alt="Delivery Fominha"></a>
+                    <p>Delivery Fominha</p>
+                </div>
+                <div class="card">
+                    <a href="https://github.com/MariaLuiseB"><img src="/images/anime.webp" alt="Animendly"></a>
+                    <p>Chat Animendly</p>
+                </div>
+                <div class="card">
+                    <a href="https://github.com/MariaLuiseB"><img src="/images/filmes.webp" alt="Screen Match"></a>
+                    <p>Screen Match</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-skills" id="skills">
+            <h2>Hard Skills</h2>
+            <ul class="skills-container">
+                <img src="/images/002-java.png" alt="Java">
+                <img src="/images/001-version-control.png" alt="Git">
+                <img src="/images/006-sql.png" alt="SQL">
+                <img src="/images/003-html.png" alt="HTML">
+                <img src="/images/004-css.png" alt="CSS">
+                <img src="/images/005-api.png" alt="API">
+            </ul>
+
+            <h2>Soft Skills</h2>
+            <ul class="skills-container">
+                <li>Comunicação</li>
+                <li>Colaboração</li>
+                <li>Resiliência</li>
+            </ul>
+        </section>
+
+        <section class="main-contato" id="contato">
+            <h2>Fale Comigo</h2>
+            <form action="/assuntos.txt" method="get" class="contato-form">
+
+                <label for="nome">Nome </label>
+                <input type="text" name="nome" placeholder="Digite seu nome aqui" />
+
+
+                <label for="Email">Email </label>
+                <input type="email" name="email" placeholder="xxxx@xxxx.com" />
+
+                <label for="assunto">Assunto </label>
+                <input type="text" name="assunto" placeholder="Digite o assunto" />
+
+                <label for="mensagem">Mensagem </label>
+                <textarea name="mensagem" rows="5" placeholder="Digite sua mensagem aqui"></textarea>
+
+                <div class="contato-checkbox-row">
+                    <label for="newsletter">Desejo receber a newsletter</label>
+                    <input type="checkbox" name="newsletter" />
                 </div>
 
-            </article>
-
-            <section class="main3">
-                <h2>Hard Skills</h2>
-                <ul class="skills-container">
-                    <img src="/images/java.png" alt="Java">
-                    <img src="/images/git.png" alt="Git">
-                    <img src="/images/python.png" alt="Python">
-                    <img src="/images/sql.png" alt="SQL">
-                    <img src="/images/html.png" alt="HTML">
-                    <img src="/images/css.png" alt="CSS">
-                </ul>
-
-                <h2>Soft Skills</h2>
-                <ul class="skills-container">
-                    <li>Comunicação</li>
-                    <li>Colaboração</li>
-                    <li>Resiliência</li>
-                </ul>
-            </section>
-
+                <button type="submit" class="button">Enviar</button>
+            </form>
         </section>
+
         <footer class="footer">
             <p>All rights reserved to Maria Luise Britto ©, 2025.</p>
             <div class="contato-icones">

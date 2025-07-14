@@ -1,0 +1,46 @@
+/* Adiciona rolagem suave à página */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    /* IMPORTANTE: Adiciona o espaçamento no topo do corpo da página
+       para não ficar atrás da navbar fixa */
+    padding-top: 60px; 
+}
+
+.navbar-fixa {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+.navbar-fixa a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    transition: background-color 0.3s;
+}
+
+.navbar-fixa a:hover {
+    background-color: #575757;
+}
+
+/* Estilização das seções para dar espaçamento e altura */
+section {
+    /* min-height garante que a seção tenha altura suficiente para a rolagem */
+    min-height: 80vh; 
+    padding: 40px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+section h2 {
+    color: #333;
+}
