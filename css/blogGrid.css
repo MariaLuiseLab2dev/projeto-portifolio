@@ -27,11 +27,18 @@ body {
 
     /* Espaçamentos padrão (mobile) */
     --gap: 1rem;
-    --padding-inline: 1rem;
-    --padding-block: 1rem;
-    --margin-block: 1.5rem;
-    --card-padding: 1rem;
-    --form-padding: 1.5rem;
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+
+    /* Tipografia */
+    --font-size-p: 0.8rem;
+    --font-size-card: 1rem;
+    --font-size-footer: 0.6rem;
+    --font-size-form: 0.8rem;
+    --font-size-h3: 1.5rem;
 }
 
 /* Tema escuro */
@@ -43,20 +50,22 @@ body {
         --cor-primaria: #9c7bff;
         --cor-secundaria: #555555;
         --cor-footer: #8e59ff;
-
-        --altura-navbar: 10vh;
     }
 }
 
 /* Tablet (>=768px) */
 @media (min-width: 768px) {
     :root {
-        --gap: 1.5rem;
-        --padding-inline: 1.5rem;
-        --padding-block: 1rem;
-        --margin-block: 2rem;
-        --card-padding: 1.25rem;
-        --form-padding: 1.5rem;
+    /* Espaços */
+        --space-sm: 1.5rem;
+        --space-md: 2rem;
+        --space-lg: 2.5rem;
+
+    /* Tipografia */
+        --font-size-p: 0.9rem;
+        --font-size-card: 1rem;
+        --font-size-input: 0.8rem;
+        --font-size-h3: 1.6rem;
     }
 }
 
@@ -64,15 +73,21 @@ body {
 @media (min-width: 1024px) {
     :root {
         --gap: 2rem;
-        --padding-inline: 2rem;
-        --padding-block: 1.5rem;
-        --margin-block: 2.5rem;
-        --card-padding: 1.5rem;
-        --form-padding: 1.5rem;
+        --space-sx: 0.5rem;
+        --space-sm: 0.8rem;
+        --space-md: 1rem;
+        --space-lg: 2rem;
+        --space-xl: 4rem;
+
+    /* Tipografia */
+        --font-size-p: 0.8rem;
+        --font-size-card: 1.2rem;
+        --font-size-input: 1.2rem;
+        --font-size-h3: 2rem;
     }
 }
 
-/* -------------------------------───── Home  -------------------------------─────*/
+/* ------------------------------- Home  -------------------------------*/
 .home-container {
     padding-top: var(--altura-navbar);
     display: grid;
@@ -105,7 +120,7 @@ nav {
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    padding: 0 var(--padding-inline);
+    padding: 0 var(--space-sm);
 }
 
 .home-container .navbar {
@@ -130,7 +145,7 @@ nav {
 
 .home-container .navbar ul li a {
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: var(--font-size-p);
     color: var(--cor-texto);
     font-weight: bold;
     transition: color 0.3s ease;
@@ -146,7 +161,7 @@ nav {
 }
 
 .home-container .navbar button {
-    font-size: 0.8rem;
+    font-size: var(--font-size-p);
     border-radius: 3rem;
     padding: 0.5rem 1rem;
     font-weight: bold;
@@ -165,7 +180,11 @@ nav {
 .home-container .main {
     grid-area: main;
     width: 100%;
-    padding: var(--padding-block) var(--padding-inline);
+    padding: var(--space-md) var(--space-md);
+}
+
+.home-container .main h3 {
+    margin-bottom: var(--space-sm);
 }
 
 /* -------------------------------─ Aside  -------------------------------─*/
@@ -182,14 +201,18 @@ nav {
     border-radius: 50%;
 }
 
-/*──────────────────────── Projetos ────────────────────────*/
+/*------------------------ Projetos ------------------------*/
 .home-container .main-projetos {
     grid-area: main-projetos;
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: var(--padding-block) var(--padding-inline);
+    padding: var(--space-md) var(--space-md);
     min-height: 100vh;
+}
+
+.home-container .main-projetos p {
+    margin: var(--space-sm);
 }
 
 .home-container .cards-container {
@@ -201,7 +224,7 @@ nav {
 }
 
 .card {
-    padding: var(--card-padding);
+    padding: var(--space-sm) var(--space-md);
     text-align: center;
     background-color: var(--cor-fundo);
     box-shadow: 1px 2px 6px var(--cor-primaria);
@@ -221,13 +244,17 @@ nav {
 
 .card p {
     text-align: center;
+}
+.card p a {
     color: var(--cor-texto);
-    font-size: 0.8rem;
+    font-size: var(--font-size-card);
     font-weight: bold;
+    cursor: pointer;
     transition: color 0.3s ease;
+    text-decoration: none;
 }
 
-.card p:hover {
+.card a:hover {
     color: var(--cor-hover);
 }
 
@@ -242,8 +269,12 @@ nav {
     min-height: 100vh;
 }
 
+.home-container .main-skills h2 {
+    margin: 0 0 var(--space-lg) 0;
+}
+
 .main-skills ul li {
-    font-size: 1rem;
+    font-size: var(--font-size-card);
     list-style: none;
     text-align: center;
 }
@@ -257,7 +288,7 @@ nav {
 }
 
 .skills-container li {
-    padding: 0 var(--padding-inline);
+    padding: 0 var(--space-md);
     font-weight: bold;
     transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -268,33 +299,35 @@ nav {
     transform: scale(1.1);
 }
 
-/*──────────────────────── Contato ────────────────────────*/
+/*----------------------------- Contato -----------------------------*/
 .home-container .main-contato {
     grid-area: main-contato;
+    padding: var(--space-md) var(--space-xs);
 }
 
 .contato-form {
+    width: 90%;
     max-width: 38rem;
-    margin: var(--margin-block) auto 0;
-    padding: var(--form-padding);
+    margin: var(--space-sm) auto;
+    padding: var(--space-lg);
     font-weight: bold;
 }
 
 .contato-form input,
 .contato-form textarea {
-    padding: var(--padding-block);
+    padding: var(--space-xs);
     border: 2px solid var(--cor-secundaria);
     border-radius: 8px;
-    font-size: 0.8rem;
+    font-size: var(--font-size-form);
     margin-bottom: var(--gap);
-    width: 100%;
+    width: 100%;        
     resize: vertical;
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
 }
 
 .contato-form label {
-    font-size: 0.9rem;
+    font-size: var(--font-size-p);
     color: var(--cor-texto);
     display: block;
     margin-bottom: 0.5rem;
@@ -342,7 +375,7 @@ nav {
     grid-area: footer;
     background-color: var(--cor-secundaria);
     width: 100%;
-    min-height: 50vh;
+    min-height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -351,7 +384,7 @@ nav {
 }
 
 .footer p {
-    font-size: 0.6rem;
+    font-size: var(--font-size-footer);
     font-weight: bold;
     text-align: center;
 }
@@ -370,7 +403,7 @@ nav {
 h2 {
     text-align: center;
     color: var(--cor-texto);
-    margin: var(--margin-block) 0;
+    
     transition: color 0.3s ease;
 }
 
@@ -384,18 +417,18 @@ h2:hover {
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: var(--font-size-h3);
     margin: var(--margin-block) 0 5rem 0;
 }
 
 p {
-    font-size: 0.8rem;
+    font-size: var(--font-size-p);
     text-align: justify;
-    margin: var(--margin-block) auto;
+    margin: var(--margin-block);
     color: var(--cor-texto);
 }
 
-/*────────────────── Media Queries Responsivas ──────────────────*/
+/*------------------------ Media Queries Responsivas ------------------------*/
 /* Tablet */
 @media (min-width: 768px) {
     .home-container {
@@ -421,26 +454,41 @@ p {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: var(--padding-block) 0;
+        margin: var(--space-sm) 0;
     }
 
-    h3 {
-        font-size: 1.5rem;
+    .home-container .main h3 {
+        font-size: var(--font-size-h3);
     }
 
     .home-container .aside img {
-        max-width: 60vh;
+        max-width: 50vh;
     }
 
+    .home-container .main-skills h2 {
+        margin: 0 0 var(--space-lg) 0; /* sem margin-top */
+    }
+
+    .home-container .main-contato {
+        padding: var(--space-md) 0;
+    }
+    
     .contato-form input,
     .contato-form textarea {
-        padding: 0.5rem;
-        font-size: 0.9rem;
+        padding: var(--space-xs);
+        font-size: var(--font-size-card);
     }
 
-    p {
-        font-size: 0.9rem;
+
+    .home-container p {
+        font-size: var(--font-size-card);
     }
+
+    .home-container .footer p {
+        font-size: var(--font-size-footer);
+        margin: var(--space-sm) 0;
+        }
+
 }
 
 /* Notebook */
@@ -454,31 +502,49 @@ p {
             "main-contato main-contato"
             "footer footer";
         grid-template-columns: 2fr 1fr;
+        gap: var(--space-md);
     }
 
     .home-container .main {
-        padding: 0 var(--padding-inline);
+        padding: 0 var(--space-md);
     }
 
-    h3 {
-        margin-top: 10vh;
-        font-size: 2rem;
+    .home-container .main h3 {
+        margin-top: var(--space-xl);
+        font-size: var(--font-size-h3);
+        margin-bottom: var(--space-xs);
     }
 
     .home-container .aside img {
-        width: 25vw;
+        width: 35vw;
     }
 
     p {
-        font-size: 1rem;
+        font-size: var(--font-size-p);
+    }
+
+    .contato-form {
+        padding: var(--space-md);
+        max-width: 40rem;
+        padding: var(--space-md); /* diminui o espaçamento interno */
+        max-width: 40rem;         /* você já tinha 48rem, pode reduzir aqui também */
+        gap: var(--space-sm);     /* se usar gap */
+        font-size: var(--space-sm);
     }
 
     .contato-form input,
     .contato-form textarea {
-        padding: 0.8rem;
-        font-size: 1rem;
+        padding: var(--space-xs);
+        font-size: var(--font-size-input);
+
+    }
+
+    .home-container .footer p {
+        font-size: var(--font-size-p);
+        margin: var(--space-sm) 0;
     }
 }
+
 
 /* -------------------------------─ Animação  -------------------------------*/
 .digitando {
